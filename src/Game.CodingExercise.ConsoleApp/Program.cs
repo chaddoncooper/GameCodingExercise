@@ -6,7 +6,7 @@ namespace Game.CodingExercise.ConsoleApp
     {
         static void Main(string[] args)
         {
-            
+            var game = new Game();
         }
     }
 }
