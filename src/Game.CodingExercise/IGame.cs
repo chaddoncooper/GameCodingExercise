@@ -1,4 +1,4 @@
-﻿namespace Game.CodingExercise.Game
+﻿namespace Game.CodingExercise
 {
     public interface IGame
     {

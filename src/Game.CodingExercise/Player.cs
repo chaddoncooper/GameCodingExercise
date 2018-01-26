@@ -1,7 +1,7 @@
 ﻿using System;
-using Game.CodingExercise.Game.Models;
+using Game.CodingExercise.Models;
 
-namespace Game.CodingExercise.Game
+namespace Game.CodingExercise
 {
     public class Player : IPlayer
     {

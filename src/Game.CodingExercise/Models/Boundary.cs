@@ -1,4 +1,4 @@
-﻿namespace Game.CodingExercise.Game.Models
+﻿namespace Game.CodingExercise.Models
 {
     public class Boundary
     {

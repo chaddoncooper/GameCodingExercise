@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Game.CodingExercise.Game
+namespace Game.CodingExercise
 {
     public class Game : IGame
     {

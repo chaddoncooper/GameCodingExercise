@@ -1,8 +1,7 @@
-﻿using Game.CodingExercise.Game;
-using Game.CodingExercise.Game.Models;
+﻿using Game.CodingExercise.Models;
 using Xunit;
 
-namespace Game.CodingExercise.GameTests
+namespace Game.CodingExercise.Tests
 {
     public class PlayerTests
     {
