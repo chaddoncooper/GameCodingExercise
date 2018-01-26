@@ -33,9 +33,6 @@ namespace Game.CodingExercise
                 case ('F'):
                     _player.MoveForward();
                     break;
-                case ('B'):
-                    _player.MoveBackward();
-                    break;
                 case ('L'):
                     _player.TurnLeft();
                     break;
@@ -53,7 +50,7 @@ namespace Game.CodingExercise
 
         public static Game GetDefaultSinglePlayerGame()
         {
-            var boundaryX = new Boundary(3, -1);
+            var boundaryX = new Boundary(3, -3);
             var boundaryY = new Boundary(3, 0);
             var boundaryZ = new Boundary(3, -3);
             var world = new World(boundaryX, boundaryY, boundaryZ);
