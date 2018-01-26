@@ -2,15 +2,15 @@
 {
     public class World
     {
-        public readonly Boundary X;
-        public readonly Boundary Y;
-        public readonly Boundary Z;
+        public readonly Boundary BoundaryX;
+        public readonly Boundary BoundaryY;
+        public readonly Boundary BoundaryZ;
 
         public World(Boundary x, Boundary y, Boundary z)
         {
-            X = x;
-            Y = y;
-            Z = z;
+            BoundaryX = x;
+            BoundaryY = y;
+            BoundaryZ = z;
         }
     }
 }
