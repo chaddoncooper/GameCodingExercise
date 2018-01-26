@@ -26,8 +26,8 @@ namespace Game.CodingExercise
             switch (Facing)
             {
                 case 'N':
-                    newPosition = Z + 1;
-                    if (newPosition <= World.BoundaryZ.Max)
+                    newPosition = Z - 1;
+                    if (newPosition >= World.BoundaryZ.Min)
                         Z = newPosition;
                     break;
                 case 'E':
@@ -36,42 +36,13 @@ namespace Game.CodingExercise
                         X = newPosition;
                     break;
                 case 'S':
-                    newPosition = Z - 1;
-                    if (newPosition >= World.BoundaryZ.Min)
-                        Z = newPosition;
-                    break;
-                case 'W':
-                    newPosition = X - 1;
-                    if (newPosition >= World.BoundaryX.Min)
-                        X = newPosition;
-                    break;
-            }
-        }
-
-        public void MoveBackward()
-        {
-            int newPosition;
-
-            switch (Facing)
-            {
-                case 'N':
-                    newPosition = Z - 1;
-                    if (newPosition >= World.BoundaryZ.Min)
-                        Z = newPosition;
-                    break;
-                case 'E':
-                    newPosition = X - 1;
-                    if (newPosition >= World.BoundaryX.Min)
-                        X = newPosition;
-                    break;
-                case 'S':
                     newPosition = Z + 1;
                     if (newPosition <= World.BoundaryZ.Max)
                         Z = newPosition;
                     break;
                 case 'W':
-                    newPosition = X + 1;
-                    if (newPosition <= World.BoundaryX.Max)
+                    newPosition = X - 1;
+                    if (newPosition >= World.BoundaryX.Min)
                         X = newPosition;
                     break;
             }
