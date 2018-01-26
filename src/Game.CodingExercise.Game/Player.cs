@@ -19,14 +19,62 @@ namespace Game.CodingExercise.Game
             Facing = facing;
         }
 
-        public bool MoveForward()
+        public void MoveForward()
         {
-            throw new NotImplementedException();
+            int newPosition;
+
+            switch (Facing)
+            {
+                case 'N':
+                    newPosition = Z + 1;
+                    if (newPosition <= World.BoundaryZ.Max)
+                        Z = newPosition;
+                    break;
+                case 'E':
+                    newPosition = X + 1;
+                    if (newPosition <= World.BoundaryX.Max)
+                        X = newPosition;
+                    break;
+                case 'S':
+                    newPosition = Z - 1;
+                    if (newPosition >= World.BoundaryZ.Min)
+                        Z = newPosition;
+                    break;
+                case 'W':
+                    newPosition = X - 1;
+                    if (newPosition >= World.BoundaryX.Min)
+                        X = newPosition;
+                    break;
+            }
         }
 
-        public bool MoveBackward()
+        public void MoveBackward()
         {
-            throw new NotImplementedException();
+            int newPosition;
+
+            switch (Facing)
+            {
+                case 'N':
+                    newPosition = Z - 1;
+                    if (newPosition >= World.BoundaryZ.Min)
+                        Z = newPosition;
+                    break;
+                case 'E':
+                    newPosition = X - 1;
+                    if (newPosition >= World.BoundaryX.Min)
+                        X = newPosition;
+                    break;
+                case 'S':
+                    newPosition = Z + 1;
+                    if (newPosition <= World.BoundaryZ.Max)
+                        Z = newPosition;
+                    break;
+                case 'W':
+                    newPosition = X + 1;
+                    if (newPosition <= World.BoundaryX.Max)
+                        X = newPosition;
+                    break;
+            }
         }
 
         public void TurnLeft()

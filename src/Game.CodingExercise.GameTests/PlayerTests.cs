@@ -63,5 +63,101 @@ namespace Game.CodingExercise.GameTests
                 Assert.Equal(correctPositions[i], player.GetPosition());
             }
         }
+
+        [Fact]
+        public void ShouldMoveForwardsWhenFacingNorthWithinBoundaries()
+        {
+            var player = new Player(_world);
+            string[] correctPositions = {"0 0 1 N", "0 0 2 N", "0 0 3 N", "0 0 3 N"};
+            for (var i = 0; i <= correctPositions.Length - 1; i++)
+            {
+                player.MoveForward();
+                Assert.Equal(correctPositions[i], player.GetPosition());
+            }
+        }
+
+        [Fact]
+        public void ShouldMoveForwardsWhenFacingEastWithinBoundaries()
+        {
+            var player = new Player(_world, facing: 'E');
+            string[] correctPositions = { "1 0 0 E", "2 0 0 E", "3 0 0 E", "3 0 0 E" };
+            for (var i = 0; i <= correctPositions.Length - 1; i++)
+            {
+                player.MoveForward();
+                Assert.Equal(correctPositions[i], player.GetPosition());
+            }
+        }
+
+        [Fact]
+        public void ShouldMoveForwardsWhenFacingSouthWithinBoundaries()
+        {
+            var player = new Player(_world, facing:'S');
+            string[] correctPositions = { "0 0 -1 S", "0 0 -2 S", "0 0 -3 S", "0 0 -3 S" };
+            for (var i = 0; i <= correctPositions.Length - 1; i++)
+            {
+                player.MoveForward();
+                Assert.Equal(correctPositions[i], player.GetPosition());
+            }
+        }
+
+        [Fact]
+        public void ShouldMoveForwardsWhenFacingWestWithinBoundaries()
+        {
+            var player = new Player(_world, 2, facing: 'W');
+            string[] correctPositions = { "1 0 0 W", "0 0 0 W", "-1 0 0 W", "-1 0 0 W" };
+            for (var i = 0; i <= correctPositions.Length - 1; i++)
+            {
+                player.MoveForward();
+                Assert.Equal(correctPositions[i], player.GetPosition());
+            }
+        }
+
+        [Fact]
+        public void ShouldMoveBackwardsWhenFacingNorthWithinBoundaries()
+        {
+            var player = new Player(_world);
+            string[] correctPositions = { "0 0 -1 N", "0 0 -2 N", "0 0 -3 N", "0 0 -3 N" };
+            for (var i = 0; i <= correctPositions.Length - 1; i++)
+            {
+                player.MoveBackward();
+                Assert.Equal(correctPositions[i], player.GetPosition());
+            }
+        }
+
+        [Fact]
+        public void ShouldMoveBackwardsWhenFacingEastWithinBoundaries()
+        {
+            var player = new Player(_world, 2, facing: 'E');
+            string[] correctPositions = { "1 0 0 E", "0 0 0 E", "-1 0 0 E", "-1 0 0 E" };
+            for (var i = 0; i <= correctPositions.Length - 1; i++)
+            {
+                player.MoveBackward();
+                Assert.Equal(correctPositions[i], player.GetPosition());
+            }
+        }
+
+        [Fact]
+        public void ShouldMoveBackwardssWhenFacingSouthWithinBoundaries()
+        {
+            var player = new Player(_world, facing: 'S');
+            string[] correctPositions = { "0 0 1 S", "0 0 2 S", "0 0 3 S", "0 0 3 S" };
+            for (var i = 0; i <= correctPositions.Length - 1; i++)
+            {
+                player.MoveBackward();
+                Assert.Equal(correctPositions[i], player.GetPosition());
+            }
+        }
+
+        [Fact]
+        public void ShouldMoveBackwardssWhenFacingWestWithinBoundaries()
+        {
+            var player = new Player(_world, facing: 'W');
+            string[] correctPositions = { "1 0 0 W", "2 0 0 W", "3 0 0 W", "3 0 0 W" };
+            for (var i = 0; i <= correctPositions.Length - 1; i++)
+            {
+                player.MoveBackward();
+                Assert.Equal(correctPositions[i], player.GetPosition());
+            }
+        }
     }
 }

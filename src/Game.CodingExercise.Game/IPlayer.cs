@@ -2,8 +2,8 @@
 {
     public interface IPlayer
     {
-        bool MoveForward();
-        bool MoveBackward();
+        void MoveForward();
+        void MoveBackward();
         void TurnLeft();
         void TurnRight();
         void MoveUp();
